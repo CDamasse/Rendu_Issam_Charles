@@ -14,7 +14,9 @@
 Route::get('/', function () {
     return view('article');
 });
-Route::resource('/', 'ArticleController');
+
+
+Route::resource('/home', 'HomeController');
 
 
 Auth::routes();

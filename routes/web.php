@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('article');
+
+
+Route::get('/articles/{articles}', function ($id) {
+
+    $articles = DB::table('articles')->find($id);
+
+    return view('articles.show', compact('articles'));
 });
 
+Route::resource('/articles', 'ArticleController');
+
+Route::resource('/contact', 'ContactController');
+
+Route::get('/contact', 'ContactController@index')->name('contact');
 
 Route::resource('/home', 'HomeController');
 

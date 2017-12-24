@@ -28,7 +28,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/articles') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -36,8 +36,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Articles</a></li>
-                        &nbsp;<li><a href="#">Contact</a></li>
+                        <li><a href="{{ route('articles.index') }}">Articles</a></li>
+                        &nbsp;<li><a href="{{ route('contact') }}">Contact</a></li>
                         <li><a href="">Administration</a></li>
                     </ul>
 

@@ -31,3 +31,5 @@ Route::get('/delete/{id}', 'AdminController@deleteArticle');
 Route::get('/admin.index', ['middleware' => 'admin', function () {
     //
 }]);
+
+Route::resource('/account', 'AccountController');

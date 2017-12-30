@@ -38,7 +38,6 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('articles.index') }}">Articles</a></li>
                         &nbsp;<li><a href="{{ route('contact.index') }}">Contact</a></li>
-                        <li><a href="{{ route('admin.index') }}">Administration</a></li>
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -54,9 +53,14 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
+                                        <a href="{{ route('account.index') }}" class="list-group-item-info">
+                                            Mon compte
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();" class="list-group-item-danger">
                                             Logout
                                         </a>
 
@@ -71,8 +75,17 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            @yield('content')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->

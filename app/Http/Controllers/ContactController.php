@@ -30,6 +30,6 @@ class ContactController extends Controller
         $post->save();
 
 
-        return redirect('/articles');
+        return redirect('/contact');
     }
 }

@@ -1,21 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <ul class="list-group">
-                        @foreach($articles as $article)
-
-                            <li class="list-group-item"><a href="/articles/{{ $article->id }}">{{ $article->title }}</a></li>
-                                <a href="/delete/{{ $article->id }}" role="button" class="btn btn-danger">Supprimer</a>
-
-                        @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="panel-body">
+            <h1>Articles</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Auteur</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($articles as $article)
+                <tr>
+                    <td><a href="/articles/{{ $article->id }}" class="list-group-item">{{ $article->title }}</a></td>
+                    <td>{{ $article->author }}</td>
+                    <td><a href="/delete/{{ $article->id }}" role="button" class="btn btn-danger">Supprimer</a></td>
+                </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
 @endsection

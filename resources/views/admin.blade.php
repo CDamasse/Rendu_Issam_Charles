@@ -10,7 +10,7 @@
                         @foreach($articles as $article)
 
                             <li class="list-group-item"><a href="/articles/{{ $article->id }}">{{ $article->title }}</a></li>
-                                <a href="/articles/destroy/{{ $article->id }}" role="button" class="btn btn-danger">Supprimer</a>
+                                <a href="/delete/{{ $article->id }}" role="button" class="btn btn-danger">Supprimer</a>
 
                         @endforeach
                         </ul>

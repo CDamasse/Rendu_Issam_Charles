@@ -25,4 +25,11 @@ class AdminController extends Controller
 
         return view('articles.show', compact('articles'));
     }
+
+    public function deleteArticle($id)
+    {
+        DB::table('articles')->delete($id);
+
+        return redirect('/admin');
+    }
 }

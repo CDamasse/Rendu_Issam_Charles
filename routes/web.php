@@ -11,14 +11,23 @@
 |
 */
 
+
 Route::resource('/articles', 'ArticleController');
 
 Route::resource('/contact', 'ContactController');
+
+Route::get('/sendContact', 'ContactController@store');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::resource('/admin', 'AdminController');
+Route::get('/delete/{id}', 'AdminController@deleteArticle');
+
+Route::get('/admin.index', ['middleware' => 'admin', function () {
+    //
+}]);

@@ -37,10 +37,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('articles.index') }}">Articles</a></li>
-                        &nbsp;<li><a href="{{ route('contact') }}">Contact</a></li>
-                        <li><a href="">Administration</a></li>
+                        &nbsp;<li><a href="{{ route('contact.index') }}">Contact</a></li>
+                        <li><a href="{{ route('admin.index') }}">Administration</a></li>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->

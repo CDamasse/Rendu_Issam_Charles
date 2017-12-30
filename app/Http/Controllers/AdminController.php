@@ -5,14 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ArticleController extends Controller
+class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
     public function index()
     {
-
         $articles = DB::table('articles')->get();
 
-        return view('articles.index', compact('articles'));
+        return view('admin', compact('articles'));
     }
 
     public function show($id)

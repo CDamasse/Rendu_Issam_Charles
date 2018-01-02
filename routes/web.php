@@ -32,3 +32,4 @@ Route::get('/admin.index', ['middleware' => 'admin', function () {
 Route::resource('/account', 'AccountController');
 
 Route::resource('/message', 'MessageController');
+

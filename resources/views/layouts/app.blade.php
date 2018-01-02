@@ -85,15 +85,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <button class="btn btn-default"></button>
-                </div>
-            </div>
-            @yield('interactions')
         </div>
     </div>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

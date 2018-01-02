@@ -2,8 +2,7 @@
 
 @section('content')
 
-    <a href="" class="list-group-item list-group-item-info">Messagerie</a>
-    <a href="" class=""></a>
+    <a href="{{ route('message.index') }}" class="list-group-item list-group-item-info">Messagerie</a>
     @if(Auth::user() &&  Auth::user()->admin == 1)
         <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-warning">Administration</a>
     @endif()

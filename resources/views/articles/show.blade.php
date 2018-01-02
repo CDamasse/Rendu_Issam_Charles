@@ -6,3 +6,9 @@
     <p>{{ $articles->body }}</p>
 
 @endsection
+
+@section('interactions')
+
+
+
+@endsection

@@ -16,9 +16,6 @@ Route::resource('/articles', 'ArticleController');
 
 Route::resource('/contact', 'ContactController');
 
-Route::get('/sendContact', 'ContactController@store');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -33,3 +30,5 @@ Route::get('/admin.index', ['middleware' => 'admin', function () {
 }]);
 
 Route::resource('/account', 'AccountController');
+
+Route::resource('/message', 'MessageController');

@@ -4,9 +4,6 @@
 
     <h1>{{ $articles->title }}</h1>
     <p>{{ $articles->body }}</p>
-
-    <div class="row">
-
-    </div>
+    <img src="{{ asset('storage/uploads/'.$articles->image) }}" class="img-fluid" alt="Responsive image" style="width: 100%;">
 @endsection
 

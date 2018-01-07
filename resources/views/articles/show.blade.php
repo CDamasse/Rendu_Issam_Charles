@@ -32,7 +32,8 @@
 
         <div class="card-block">
 
-            <form>
+            <form method="POST" action="/article/{id}/comments/">
+
 
                 <div class="form-group">
                      <textarea name="body" placeholder="Your comment here." class="form-control">

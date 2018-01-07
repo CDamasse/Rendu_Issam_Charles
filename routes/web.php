@@ -33,3 +33,5 @@ Route::resource('/account', 'AccountController');
 
 Route::resource('/message', 'MessageController');
 
+Route::post('/article/{article}/comments', 'CommentsController@store');
+

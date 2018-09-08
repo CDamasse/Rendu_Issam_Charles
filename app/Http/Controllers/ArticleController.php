@@ -12,9 +12,9 @@ class ArticleController extends Controller
     public function index()
     {
 
-        $articles = DB::table('articles')->get();
+        $article = DB::table('articles')->get();
 
-        return view('articles.index', compact('articles'));
+        return view('articles.index', compact('article'));
     }
 
     public function show($id)

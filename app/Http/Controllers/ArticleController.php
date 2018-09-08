@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Articles;
